@@ -78,11 +78,12 @@ const MovieListContainer = styled.div`
   gap: 25px;
   justify-content: space-evenly;;
 `;
-const Placeholder = styled.img`
+const Placeholder = styled.div`
   width: 120px;
   height: 120px;
   margin: 150px;
   opacity: 50%;
+  color: #000;
 `;
 
 function App() {
@@ -111,11 +112,9 @@ function App() {
     <Container>
       <Header>
         <AppName>
-          <MovieImage src="/react-movie-app/movie-icon.svg" />
           React Movie App
         </AppName>
         <SearchBox>
-          <SearchIcon src="/react-movie-app/search-icon.svg" />
           <SearchInput
             placeholder="Search Movie"
             value={searchQuery}
@@ -134,7 +133,7 @@ function App() {
             />
           ))
         ) : (
-          <Placeholder src="/react-movie-app/movie-icon.svg" />
+          <Placeholder />
         )}
       </MovieListContainer>
     </Container>
